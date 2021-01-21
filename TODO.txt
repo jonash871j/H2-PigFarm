@@ -1,0 +1,3 @@
+- ER Diagram
+Change all No attributes to INTEGER
+Stall_SmartUnit is missing
