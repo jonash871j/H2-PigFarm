@@ -22,4 +22,15 @@
 --	VALUES(_cvr, _email, _first_name, _last_name, _address_id)
 --$$;
 
+CREATE OR REPLACE PROCEDURE SP_CreateOwner(
+	_owner_cvr VARCHAR,
+	_owner_phone_number VARCHAR,
+	_farm_phone_number VARCHAR,
+	_farm_chr_number INTEGER,
+)
+LANGUAGE SQL
+AS $$
+
+$$;
+
 

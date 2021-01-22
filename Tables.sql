@@ -102,7 +102,7 @@ CREATE TABLE Box_SmartUnit(
     no INTEGER,
     serial_number INTEGER,
     value INTEGER,
-    time TIME,
+    time TIMESTAMP,
     
     PRIMARY KEY (no, serial_number),
     FOREIGN KEY (no) REFERENCES Box(no),
@@ -123,7 +123,7 @@ CREATE TABLE Box_Animal(
 CREATE TABLE SmartUnit_State(
     serial_number INTEGER,
     id INTEGER,
-    time TIME,
+    time TIMESTAMP,
     
     PRIMARY KEY (serial_number, id),
     FOREIGN KEY (serial_number) REFERENCES SmartUnit(serial_number),
