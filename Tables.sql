@@ -15,7 +15,7 @@ CREATE TABLE Address(
 );
 
 CREATE TABLE Owner(
-	cvr INTEGER PRIMARY KEY,
+	cvr VARCHAR(8) PRIMARY KEY,
 	email VARCHAR(100),
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
@@ -25,16 +25,16 @@ CREATE TABLE Owner(
 );
 
 CREATE TABLE Phone(
-	number INTEGER PRIMARY KEY,
-	cvr INTEGER,
+	number VARCHAR(8) PRIMARY KEY,
+	cvr VARCHAR(8),
 
 	FOREIGN KEY (cvr) REFERENCES Owner(cvr)
 );
 
 
 CREATE TABLE Farm(
-	phone_number INTEGER PRIMARY KEY,
-	cvr INTEGER,
+	phone_number VARCHAR(8) PRIMARY KEY,
+	cvr VARCHAR(8),
 	name VARCHAR(60),
 	address_id  INTEGER,
 
@@ -44,14 +44,14 @@ CREATE TABLE Farm(
 
 CREATE TABLE CHR(
 	number INTEGER PRIMARY KEY,
-	phone_number INTEGER,
+	phone_number VARCHAR(8),
 
 	FOREIGN KEY (phone_number) REFERENCES Farm(phone_number)
 );
 
 CREATE TABLE Stall(
 	no INTEGER PRIMARY KEY,
-	phone_number INTEGER,
+	phone_number VARCHAR(8),
 
 	FOREIGN KEY (phone_number) REFERENCES Farm(phone_number)
 );
