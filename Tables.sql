@@ -42,8 +42,8 @@ CREATE TABLE Farm(
 	FOREIGN KEY (address_id) REFERENCES Address(id)
 );
 
-CREATE TABLE CHR(
-	number INTEGER PRIMARY KEY,
+CREATE TABLE FarmCHR(
+	chr VARCHAR(6) PRIMARY KEY,
 	phone_number VARCHAR(8),
 
 	FOREIGN KEY (phone_number) REFERENCES Farm(phone_number)
@@ -74,6 +74,19 @@ CREATE TABLE State(
     severity VARCHAR(20)
 );
 
+CREATE TABLE EarmarkColor(
+    id INTEGER PRIMARY KEY,
+    color VARCHAR(25)
+);
+
+CREATE TABLE Earmark(
+    id SERIAL PRIMARY KEY,
+    chr VARCHAR(6),
+    color_id INTEGER,
+
+    FOREIGN KEY (color_id) REFERENCES EarmarkColor(id)
+);
+
 CREATE TABLE Animal(
     id SERIAL PRIMARY KEY,
     type VARCHAR(30),
@@ -81,9 +94,9 @@ CREATE TABLE Animal(
     age INTEGER,
     birth TIMESTAMP,
     death TIMESTAMP,
-    earmarkchrno INTEGER,
-    earmarkid INTEGER,
-    earmarkcolor VARCHAR(20)
+    earmark_id INTEGER,
+
+    FOREIGN KEY (earmark_id) REFERENCES Earmark(id)
 );
 
 -- Relations ***************************************************************

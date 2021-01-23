@@ -1,10 +1,19 @@
+CALL SP_CreateOwner('TestFirst', 'TestLast', 'dummy@owner.dk', '12345678', 'gårdvej', '24', 4000, '12123434');
+CALL SP_CreateFarm('DummyFarm', 'FarmStreet', '2', 4000, '23546523', '12123434');
+
+INSERT INTO EarmarkColor(id, color) VALUES(1, 'Gul');
+INSERT INTO EarmarkColor(id, color) VALUES(2, 'Rød');
+INSERT INTO EarmarkColor(id, color) VALUES(3, 'Hvid');
+
+CALL SP_CreateAnimal('Gris', 'Han', 3, '2017-01-01'::timestamp, '2020-01-30'::timestamp, '16325426', 1);
+
 do $$ 
 declare
 	-- PRIMARY KEYS
 	_owner_cvr VARCHAR := '67867';
 	_owner_phone_number VARCHAR := '567';
 	_farm_phone_number VARCHAR := '567';
-	_farm_chr_number INTEGER := 567;
+	_farm_chr_number INTEGER := 12;
 	_stall_no INTEGER := 7689;
 	_box_no INTEGER := 456;
 	_smart_unit_serial_number INTEGER := 678;
