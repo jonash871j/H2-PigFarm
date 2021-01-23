@@ -1,3 +1,5 @@
+CREATE UNIQUE INDEX animal_index ON Animal (id);
+
 CREATE OR REPLACE PROCEDURE SP_CreateOwner(
 	_first_name VARCHAR,
 	_last_name VARCHAR,

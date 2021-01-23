@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX city_index ON City (postcode);

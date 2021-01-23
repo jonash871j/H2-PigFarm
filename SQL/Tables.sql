@@ -160,3 +160,4 @@ CREATE TABLE Animal_Produce(
     FOREIGN KEY (id_child) REFERENCES Animal(id),
     FOREIGN KEY (id_parent) REFERENCES Animal(id)
 );
+
