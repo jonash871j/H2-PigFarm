@@ -5,5 +5,3 @@
 4. Indexes.sql
 5. InsertPostcodes.sql
 6. InsertData.sql
-
-## Views
