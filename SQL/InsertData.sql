@@ -5,8 +5,8 @@ INSERT INTO EarmarkColor(id, color) VALUES(1, 'Gul');
 INSERT INTO EarmarkColor(id, color) VALUES(2, 'Rød');
 INSERT INTO EarmarkColor(id, color) VALUES(3, 'Hvid');
 
-CALL SP_CreateAnimal('Gris', 'Han', 4, '2017-01-01'::timestamp, '2021-01-30'::timestamp, '163526', 1);
-CALL SP_CreateAnimal('Gris', 'Hun', 4, '2017-02-01'::timestamp, '2021-01-30'::timestamp, '645634', 2);
+CALL SP_CreateAnimal('Gris', 'Han', '2017-01-01'::timestamp, '2021-01-30'::timestamp, '163526', 1);
+CALL SP_CreateAnimal('Gris', 'Hun', '2017-02-01'::timestamp, '2021-01-30'::timestamp, '645634', 2);
 
 
 --do $$ 

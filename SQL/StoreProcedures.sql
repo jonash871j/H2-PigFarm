@@ -1,5 +1,3 @@
-CREATE UNIQUE INDEX animal_index ON Animal (id);
-
 CREATE OR REPLACE PROCEDURE SP_CreateOwner(
 	_first_name VARCHAR,
 	_last_name VARCHAR,
@@ -51,7 +49,6 @@ $$;
 CREATE OR REPLACE PROCEDURE SP_CreateAnimal(
 	_type VARCHAR,
 	_sex VARCHAR,
-	_age INTEGER,
 	_birth TIMESTAMP,
 	_death TIMESTAMP,
 	_earmark_chr VARCHAR,
@@ -67,7 +64,7 @@ BEGIN
 		RETURNING id INTO _temp_serial_id;
 
 	INSERT INTO Animal(type, sex, age, birth, death, earmark_id)
-	VALUES(_type, _sex, _age, _birth, _death, _temp_serial_id);
+	VALUES(_type, _sex, 0, _birth, _death, _temp_serial_id);
 END
 $$;
 
