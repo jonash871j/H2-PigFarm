@@ -1,4 +1,4 @@
--- Used to get all items from the last 24 hours
+-- Used to get activities in Box_SmartUnit from the last 24 hours
 CREATE VIEW BoxLog_View AS
 	SELECT *
 	FROM Box_SmartUnit
