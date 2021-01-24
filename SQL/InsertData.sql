@@ -10,19 +10,24 @@ CALL SP_CreateAnimal('Gris', 'Hun', '2017-02-01'::timestamp, '2021-01-30'::times
 
 INSERT INTO Box(no, type, outdoor) VALUES(654, 'SomeType1', true);
 INSERT INTO Box(no, type, outdoor) VALUES(123, 'SomeType2', false);
+INSERT INTO Box(no, type, outdoor) VALUES(778, 'SomeType3', false);
 
 INSERT INTO SmartUnit(serial_number, type, ip_address, mac_address)
-VALUES(1234, 'SomeType3', '192.168.1.32', '43EF34EF34EF');
-
+VALUES(1234, 'SomeType4', '192.168.1.32', '43EF34EF34EF');
 INSERT INTO SmartUnit(serial_number, type, ip_address, mac_address)
-VALUES(4321, 'SomeType4', '192.168.1.64', '23FE65EF34EF');
+VALUES(4321, 'SomeType5', '192.168.1.64', '23FE65EF34EF');
+INSERT INTO SmartUnit(serial_number, type, ip_address, mac_address)
+VALUES(9988, 'SomeType6', '192.168.1.128', '998865EF3477');
 
-INSERT INTO Box_SmartUnit(no, serial_number, value, time) 
-VALUES(654, 4321, '324', '2020-01-22 8:36:19'::timestamp);
-INSERT INTO Box_SmartUnit(no, serial_number, value, time) 
-VALUES(654, 1234, '324', '2020-01-23 10:12:23'::timestamp);
 INSERT INTO Box_SmartUnit(no, serial_number, value, time)
-VALUES(123, 4321, '324', '2020-01-24 18:54:25'::timestamp);
+VALUES(778, 9988, '324', '2020-01-23 18:54:25'::timestamp);
+INSERT INTO Box_SmartUnit(no, serial_number, value, time) 
+VALUES(654, 4321, '324', '2020-01-24 8:36:19'::timestamp);
+INSERT INTO Box_SmartUnit(no, serial_number, value, time) 
+VALUES(654, 1234, '324', '2020-01-25 10:12:23'::timestamp);
+
+
+
 
 --do $$ 
 --declare
