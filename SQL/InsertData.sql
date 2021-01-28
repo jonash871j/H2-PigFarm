@@ -20,11 +20,11 @@ INSERT INTO SmartUnit(serial_number, type, ip_address, mac_address)
 VALUES(9988, 'SomeType6', '192.168.1.128', '998865EF3477');
 
 INSERT INTO Box_SmartUnit(no, serial_number, value, time)
-VALUES(778, 9988, '324', '2020-01-23 18:54:25'::timestamp);
+VALUES(778, 9988, '324', '2021-01-27 18:54:25'::timestamp);
 INSERT INTO Box_SmartUnit(no, serial_number, value, time) 
-VALUES(654, 4321, '324', '2020-01-24 8:36:19'::timestamp);
+VALUES(654, 4321, '324', '2021-01-28 8:36:19'::timestamp);
 INSERT INTO Box_SmartUnit(no, serial_number, value, time) 
-VALUES(654, 1234, '324', '2020-01-25 10:12:23'::timestamp);
+VALUES(654, 1234, '324', '2021-01-29 10:12:23'::timestamp);
 
 
 
